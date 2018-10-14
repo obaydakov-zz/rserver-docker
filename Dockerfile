@@ -114,6 +114,8 @@ EXPOSE 3838 8787
 COPY shiny-server.conf  /etc/shiny-server/shiny-server.conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+COPY /myapp /srv/shiny-server/
+
 ## set directory to `~/ShinyApps`
 # RUN yes | /opt/shiny-server/bin/deploy-example user-dirs
 # RUN cp -R /usr/local/lib/R/site-library/shiny/examples/* ~/ShinyApps/
