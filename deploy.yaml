@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: rserver
+ labels:
+   name: rserver-pod
+spec:
+ containers:
+   - name: rserver
+     image: olegemirates.azurecr.io/rserver-shiny
+     ports:
+       - containerPort: 88
